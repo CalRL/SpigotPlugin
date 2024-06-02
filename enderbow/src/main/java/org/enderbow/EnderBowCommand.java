@@ -27,7 +27,9 @@ public class EnderBowCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.RED + plugin.getConfig().getString("enderpearl_bow.messages.no_console"));
             return true;
         }
+        if(args.length >= 1) {
 
+        }
         Player player = (Player) sender;
         ItemStack enderBow = new ItemStack(Material.BOW);
         ItemMeta meta = enderBow.getItemMeta();
