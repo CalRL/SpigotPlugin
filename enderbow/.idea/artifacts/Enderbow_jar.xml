@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Enderbow:jar">
+    <output-path>$USER_HOME$/Desktop/server/plugins</output-path>
+    <root id="archive" name="Enderbow.jar">
+      <element id="module-output" name="Enderbow" />
+    </root>
+  </artifact>
+</component>

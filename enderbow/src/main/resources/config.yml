@@ -1,0 +1,9 @@
+enderpearl_bow:
+  name: "Enderpearl Bow"
+  name_color: "LIGHT_PURPLE"
+  play_sound: true
+  messages:
+    bow_give: "You have been given an Enderpearl Bow!"
+    no_permission: "You do not have permission to use this command!"
+    no_permission_bow: "You do not have permission to use the Enderpearl Bow!"
+    no_console: "Only players can use this command!"

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="caldev:jar">
+    <output-path>$USER_HOME$/Desktop/server/plugins</output-path>
+    <root id="archive" name="caldev.jar">
+      <element id="module-output" name="caldev" />
+    </root>
+  </artifact>
+</component>

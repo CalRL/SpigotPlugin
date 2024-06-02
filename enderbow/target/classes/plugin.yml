@@ -1,0 +1,13 @@
+name: enderbow
+version: '1.0-SNAPSHOT'
+main: org.enderbow.Enderbow
+api-version: '1.20'
+load: STARTUP
+commands:
+  enderbow:
+    description: Gives the player an Enderpearl Bow
+    usage: /<command>
+    permission: enderbow.command.enderbow
+    aliases:
+      - ebow
+    permission-message: "You do not have permission to use this command"
