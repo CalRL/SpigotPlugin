@@ -1,15 +1,19 @@
-name: SpigotPlugin
+name: Hubbly
 version: '${project.version}'
-main: org.caldev.SpigotPlugin
+main: com.caldev.Hubbly
 api-version: '1.20'
-authors: [ 'Caldev' ]
+prefix: Hubbly
+load: STARTUP
+authors: [cal]
+website: cal.ceo
 commands:
-  cow:
-      description: SpigotPlugin command
-      usage: "/cow"
-      permission: spigotplugin.command.cow
-      permission-message: "You do not have permission to use this command"
-  ebow:
-      description: Gives the player an Enderpearl Bow
-      usage: /<command>
-      permission: spigotplugin.command.ebow
+  compass:
+    description: Gives the player a Compass
+    usage: /<command>
+    permission: hubbly.command.compass
+    aliases:
+      - cm
+
+softdepend:
+  - PlaceholderAPI
+

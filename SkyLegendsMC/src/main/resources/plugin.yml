@@ -1,0 +1,10 @@
+name: SkyLegendsEnchants
+version: '${project.version}'
+main: com.skylegendsmc.SkyLegendsEnchants
+api-version: '1.20'
+commands:
+  customenchant:
+    description: Enchant the item in your hand with a custom enchantment
+    usage: /customenchant <enchantment> <level>
+    permission: skylegendsmc.customenchant
+    permission-message: You do not have permission to use this command.

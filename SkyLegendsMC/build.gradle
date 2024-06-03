@@ -1,0 +1,34 @@
+apply plugin: 'java'
+
+repositories {
+
+    mavenCentral()
+
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    mavenLocal()
+}
+
+dependencies {
+    implementation "org.spigotmc:spigot-api:1.20.6-R0.1-SNAPSHOT"
+    implementation 'org.spigotmc:spigot:1.20.6-R0.1-SNAPSHOT'
+    implementation 'org.spigotmc:minecraft-server:1.20.6-R0.1-SNAPSHOT'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+// Define the custom output directory
+def outputDir = file("C:\\Users\\Cal\\Desktop\\server\\plugins")
+
+// Create a task to copy the JAR file to the custom directory
+task copyJarToOutput(type: Copy) {
+    from jar
+    into outputDir
+}
+
+// Ensure the copyJarToOutput task runs after the JAR task
+build.dependsOn copyJarToOutput
