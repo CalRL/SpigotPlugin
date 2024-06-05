@@ -13,6 +13,27 @@ commands:
     permission: hubbly.command.compass
     aliases:
       - cm
+  playervisibility:
+    description: Toggles player visibility
+    usage: /<command>
+    permission: hubbly.command.playervisibility
+    aliases:
+      - pv
+  launchpad:
+    description: Launches the player into the air
+    usage: /<command>
+    permission: hubbly.command.launchpad
+  shopitem:
+    description: Opens the shop GUI
+    usage: /<command>
+    permission: hubbly.command.shop
+  socialscommand:
+    description: gives the user the socials item
+    usage: /<command>
+    permission: hubbly.command.socialscommand
+
+
+
 
 softdepend:
   - PlaceholderAPI

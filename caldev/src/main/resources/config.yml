@@ -1,8 +1,6 @@
 compass:
   enabled: true  # Whether the compass functionality is enabled
   name: "Server Selector"  # Name displayed in chat messages
-  name_color: "GOLD"  # Color code for the name (check Bukkit documentation for color codes)
-  play_sound: true  # Whether to play a sound when using the compass
   gui:  # Configuration for the compass GUI
     size: 27  # Number of slots in the GUI
     title: "Server Selector"  # Title displayed in the GUI
@@ -12,10 +10,36 @@ compass:
         name: "%player_name%'s Server"  # Display name of the item with placeholder
         lore: # Lore for the item
            - "This is line 1"
-           - "This is line 2 with %some_placeholder%"
+           - "This is line 2 with %player_name%"
         command: "server example"  # Command to execute when the item is clicked (replace "example" with your actual server name)
-    messages: # Compass-related chat messages
-      compass_give: "You have been given a Compass!"
-      no_permission_command: "You do not have permission to use this command!"
-      no_permission_use: "You do not have permission to use the Compass!"
-      no_console: "Only players can use this command!"
+  messages: # Compass-related chat messages
+    compass_give: "You have been given a Compass!"
+    no_permission_use: "You do not have permission to use the Compass!"
+launchpad:
+  enabled: true
+  type: "SLIME_BLOCK"
+shop:
+  enabled: true
+  command: "shop"
+  item:
+    name: "Shop"
+    type: "EMERALD"
+socials:
+  enabled: true
+  item:
+    type: ""
+    value: "" # Leave empty if item isnt SKULL
+    name: ""
+item_on_join:
+  enabled: true
+  features:
+    compass:
+      enabled: true
+      slot: 1
+    shop:
+      enabled: true
+      slot: 2
+messages:
+  no_console: "Only players can use this command!"
+  no_permission_command: "You do not have permission to use this command!"
+  no_permission_use: "You do not have permission to use this!"

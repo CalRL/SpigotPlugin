@@ -2,6 +2,7 @@ package com.caldev.listeners;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,6 +18,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -53,11 +55,18 @@ public class CompassListener implements Listener {
 
     @EventHandler
     public void onPlayerRightClick(PlayerInteractEvent event) {
-        if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() != Action.PHYSICAL) {
             Player player = event.getPlayer();
             if (player.getInventory().getItemInMainHand().getType() == Material.COMPASS) {
-                openCompassGUI(player);
-                logger.info("Opened compass GUI for player " + player.getName());
+                if(player.hasPermission( "hubbly.compass.use") || player.isOp()) {
+                    event.setCancelled(true);
+                    openCompassGUI(player);
+                } else {
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(config.getString("messages.no_permission_use"))));
+
+                }
+
+//                logger.info("Opened compass GUI for player " + player.getName());
             }
         }
     }
@@ -70,40 +79,38 @@ public class CompassListener implements Listener {
             ItemStack clickedItem = event.getCurrentItem();
             if (clickedItem != null && clickedItem.hasItemMeta()) {
                 ItemMeta meta = clickedItem.getItemMeta();
-                if (meta != null) {
-                    PersistentDataContainer dataContainer = meta.getPersistentDataContainer();
+                assert meta != null;
+                PersistentDataContainer dataContainer = meta.getPersistentDataContainer();
                     String itemKeyString = dataContainer.get(itemKey, PersistentDataType.STRING);
-                    if (itemKeyString != null) {
-                        String command = config.getString("compass.gui.items." + itemKeyString + ".command");
-                        if (command != null) {
-                            if (command.startsWith("server ")) {
-                                sendPlayerToServer(player, command.split(" ")[1]);
-                            } else {
-                                command = parsePlaceholders(player, command);
-                                player.performCommand(command.replace("%player%", player.getName()));
-                                player.sendMessage("Executing command: " + command.replace("%player%", player.getName()));
-                            }
+                    String command = config.getString("compass.gui.items." + itemKeyString + ".command");
+                    if (itemKeyString != null && command != null) {
+                        if (command.startsWith("server ")) {
+                            sendPlayerToServer(player, command.split(" ")[1]);
                         } else {
-                            logger.warning("No command found for item key: " + itemKeyString);
-                            player.sendMessage("No command found for this item.");
+                            command = parsePlaceholders(player, command);
+                            player.performCommand(command.replace("%player%", player.getName()));
+//                                player.sendMessage("Executing command: " + command.replace("%player%", player.getName()));
                         }
                         player.closeInventory();
-                    }
+
                 }
             }
         }
     }
 
     private void openCompassGUI(Player player) {
-        Inventory gui = Bukkit.createInventory(null, config.getInt("compass.gui.size"), Objects.requireNonNull(config.getString("compass.gui.title")));
+        if(Objects.equals(config.getString("compass.enabled"), "true")) {
+            Inventory gui = Bukkit.createInventory(null, config.getInt("compass.gui.size"), Objects.requireNonNull(config.getString("compass.gui.title")));
 
-        for (String itemKey : Objects.requireNonNull(config.getConfigurationSection("compass.gui.items")).getKeys(false)) {
-            ItemStack item = createItemFromConfig(player, itemKey);
-            if (item != null) {
-                gui.addItem(item);
+            for (String itemKey : Objects.requireNonNull(config.getConfigurationSection("compass.gui.items")).getKeys(false)) {
+                ItemStack item = createItemFromConfig(player, itemKey);
+                if (item != null) {
+                    gui.addItem(item);
+                }
             }
+            player.openInventory(gui);
         }
-        player.openInventory(gui);
+
     }
 
     private ItemStack createItemFromConfig(Player player, String itemKey) {

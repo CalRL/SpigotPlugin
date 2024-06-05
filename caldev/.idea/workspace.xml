@@ -10,38 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69b13164-b4cf-4604-be17-a78cb6f56045" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/libraries/spigot_1_20_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/modules/SkyLegendsMC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/modules/SkyLegendsMC.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/modules/SkyLegendsMC.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/src/main/java/com/skylegendsmc/CustomEnchantCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/src/main/java/com/skylegendsmc/enchants/ThunderlordEnchantment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/src/main/java/com/skylegendsmc/listeners/ThunderlordListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SkyLegendsMC/src/main/resources/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/CompassListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/caldev_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Hubbly_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/LaunchpadCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/PlayerVisibilityCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/SocialsCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/functions/CreateCustomHead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/functions/ParsePlaceholders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/CompassItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/ShopItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/SocialsItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ItemJoinListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/LaunchpadListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/PlayerVisibilityListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ShopListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caldev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/caldev.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/caldev/BowListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/caldev/CowCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/caldev/EnderBowCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/caldev/EntityListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/caldev/SpigotPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/Hubbly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/Hubbly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/CompassListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/CompassListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,32 +48,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2hN5ySQeyb9hzQKof1AwmpllrT7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15234375",
-    "project.structure.side.proportion": "0.24252874",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15234375&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24252874&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="caldev package" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
@@ -133,11 +122,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717421950543</updated>
-      <workItem from="1717421951682" duration="9587000" />
+      <workItem from="1717421951682" duration="23152000" />
+      <workItem from="1717453519556" duration="1015000" />
+      <workItem from="1717495340015" duration="8067000" />
+      <workItem from="1717584595109" duration="12101000" />
+      <workItem from="1717605184943" duration="1732000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
