@@ -2,6 +2,7 @@ package com.caldev.items;
 
 import com.caldev.functions.CreateCustomHead;
 import com.caldev.functions.ParsePlaceholders;
+import com.caldev.interfaces.CustomItem;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import org.bukkit.ChatColor;
@@ -18,7 +19,7 @@ import java.lang.reflect.Field;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-public class SocialsItem extends ItemStack {
+public class SocialsItem implements CustomItem {
 
     private final FileConfiguration config;
     public SocialsItem(FileConfiguration config) {
@@ -26,12 +27,12 @@ public class SocialsItem extends ItemStack {
 
     }
 
-    public final ItemStack socialsItem() {
+    public final ItemStack createItem() {
         ItemStack item;
         String textureValue = config.getString("socials.item.value");
         String itemName = config.getString("socials.item.name");
         String itemType = config.getString("socials.item.type");
-        if("SKULL".equalsIgnoreCase(itemType)) {
+        if("PLAYER_HEAD".equalsIgnoreCase(itemType)) {
             item = CreateCustomHead.createCustomHead(textureValue, itemName);
         } else {
             try {

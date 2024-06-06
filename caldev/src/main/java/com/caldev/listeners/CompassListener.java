@@ -1,5 +1,7 @@
 package com.caldev.listeners;
 
+import com.caldev.functions.ParsePlaceholders;
+import org.bukkit.event.EventHandler;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,7 +9,6 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -57,7 +58,8 @@ public class CompassListener implements Listener {
     public void onPlayerRightClick(PlayerInteractEvent event) {
         if (event.getAction() != Action.PHYSICAL) {
             Player player = event.getPlayer();
-            if (player.getInventory().getItemInMainHand().getType() == Material.COMPASS) {
+            ItemStack item = player.getInventory().getItemInMainHand();
+            if (player.getInventory().getItemInMainHand().getType() == Material.COMPASS && Objects.requireNonNull(item.getItemMeta()).getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(config.getString("compass.name"))))) {
                 if(player.hasPermission( "hubbly.compass.use") || player.isOp()) {
                     event.setCancelled(true);
                     openCompassGUI(player);
@@ -108,6 +110,17 @@ public class CompassListener implements Listener {
                     gui.addItem(item);
                 }
             }
+            if (config.isConfigurationSection("compass.fill")) {
+                ItemStack fillItem = createFillItem(player);
+                if (fillItem != null) {
+                    for (int i = 0; i < gui.getSize(); i++) {
+                        if (gui.getItem(i) == null || gui.getItem(i).getType() == Material.AIR) {
+                            gui.setItem(i, fillItem);
+                        }
+                    }
+                }
+            }
+
             player.openInventory(gui);
         }
 
@@ -171,4 +184,32 @@ public class CompassListener implements Listener {
             player.sendMessage("Failed to connect to server: " + server);
         }
     }
+    private ItemStack createFillItem(Player player) {
+        String materialName = config.getString("compass.fill.type");
+        if (materialName == null) {
+            logger.warning("Material not set for fill item in configuration.");
+            return null;
+        }
+
+        Material material = Material.getMaterial(materialName);
+        if (material == null) {
+            logger.warning("Invalid material " + materialName + " for fill item in configuration.");
+            return null;
+        }
+
+        ItemStack item = new ItemStack(material);
+        ItemMeta meta = item.getItemMeta();
+        if (meta != null) {
+            String displayName = config.getString("compass.fill.name");
+            if (displayName != null) {
+                displayName = ParsePlaceholders.parsePlaceholders(player, displayName);
+                meta.setDisplayName(displayName);
+            }
+
+            item.setItemMeta(meta);
+        }
+
+        return item;
+    }
+
 }

@@ -7,31 +7,30 @@ load: STARTUP
 authors: [cal]
 website: cal.ceo
 commands:
-  compass:
-    description: Gives the player a Compass
-    usage: /<command>
-    permission: hubbly.command.compass
-    aliases:
-      - cm
-  playervisibility:
-    description: Toggles player visibility
-    usage: /<command>
-    permission: hubbly.command.playervisibility
-    aliases:
-      - pv
-  launchpad:
-    description: Launches the player into the air
-    usage: /<command>
-    permission: hubbly.command.launchpad
-  shopitem:
-    description: Opens the shop GUI
-    usage: /<command>
-    permission: hubbly.command.shop
-  socialscommand:
-    description: gives the user the socials item
-    usage: /<command>
-    permission: hubbly.command.socialscommand
+  hubbly:
+    description: main command
+    usage: /hubbly
+    permission: hubbly.hubbly
 
+permissions:
+  hubbly.hubbly:
+    default: true
+  hubbly.command.compass:
+    default: op
+  hubbly.command.playervisibility:
+    default: op
+  hubbly.command.launchpad:
+    default: op
+  hubbly.command.shop:
+    default: op
+  hubbly.compass.use:
+    default: op
+  hubbly.launchpad.use:
+    default: op
+  hubbly.playervisibility.use:
+    default: op
+  hubbly.socials.use:
+    default: op
 
 
 

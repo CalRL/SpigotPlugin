@@ -10,24 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69b13164-b4cf-4604-be17-a78cb6f56045" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/LaunchpadCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/PlayerVisibilityCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/SocialsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/functions/CreateCustomHead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/functions/ParsePlaceholders.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/CompassItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/ShopItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/SocialsItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ItemJoinListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/LaunchpadListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/PlayerVisibilityListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ShopListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/GiveCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/HubblyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/interfaces/CustomItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/interfaces/SubCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/PlayerVisibilityItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/SocialsListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caldev.iml" beforeDir="false" afterPath="$PROJECT_DIR$/caldev.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/Hubbly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/Hubbly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/CompassCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/LaunchpadCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/PlayerVisibilityCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/ShopCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/commands/SocialsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/functions/CreateCustomHead.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/functions/CreateCustomHead.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/items/CompassItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/CompassItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/items/ShopItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/ShopItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/items/SocialsItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/items/SocialsItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/CompassListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/CompassListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ItemJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/caldev/listeners/ItemJoinListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
@@ -126,12 +127,28 @@
       <workItem from="1717453519556" duration="1015000" />
       <workItem from="1717495340015" duration="8067000" />
       <workItem from="1717584595109" duration="12101000" />
-      <workItem from="1717605184943" duration="1732000" />
+      <workItem from="1717605184943" duration="2694000" />
+      <workItem from="1717625057413" duration="606000" />
+      <workItem from="1717674439206" duration="331000" />
+      <workItem from="1717675698150" duration="1383000" />
+      <workItem from="1717677944504" duration="10281000" />
+      <workItem from="1717700244615" duration="6300000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/caldev/listeners/SocialsListener.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

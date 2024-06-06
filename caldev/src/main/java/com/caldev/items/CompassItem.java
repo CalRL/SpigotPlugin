@@ -1,6 +1,7 @@
 package com.caldev.items;
 
 
+import com.caldev.interfaces.CustomItem;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,7 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-public class CompassItem extends ItemStack{
+public class CompassItem implements CustomItem {
 
 
     private final FileConfiguration config;
@@ -18,7 +19,7 @@ public class CompassItem extends ItemStack{
         this.config = config;
     }
 
-    public final ItemStack compassItem() {
+    public final ItemStack createItem() {
         ItemStack compass = new ItemStack(Material.COMPASS);
         ItemMeta meta = compass.getItemMeta();
         if(meta != null) {
