@@ -33,7 +33,7 @@ public class LaunchpadListener implements Listener {
 
         Material launchpadMaterial = Material.valueOf(config.getString("launchpad.type"));
         if (blockStandingOn.getType() == launchpadMaterial || blockBelow.getType() == launchpadMaterial) {
-            if (player.hasPermission("hubbly.launchpad.use")) {
+            if (player.hasPermission("hubbly.launchpad.use") || player.isOp()) {
                 //logger.info("Player is on a launchpad!");
 
                 // Get the player's current direction

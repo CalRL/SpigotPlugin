@@ -3,6 +3,12 @@
     <output-path>$USER_HOME$/Desktop/server/plugins</output-path>
     <root id="archive" name="Hubbly.jar">
       <element id="module-output" name="caldev" />
+      <element id="directory" name="shaded">
+        <element id="directory" name="bstats">
+          <element id="library" level="project" name="Maven: org.bstats:bstats-base:3.0.2" />
+          <element id="library" level="project" name="Maven: org.bstats:bstats-bukkit:3.0.2" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

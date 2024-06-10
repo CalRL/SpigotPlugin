@@ -2,10 +2,14 @@ package com.caldev;
 
 import com.caldev.commands.*;
 import com.caldev.listeners.*;
+import com.caldev.metrics.Metrics;
+import com.caldev.metrics.Metrics.CustomChart;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 public final class Hubbly extends JavaPlugin {
@@ -24,6 +28,9 @@ public final class Hubbly extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new SocialsListener(logger, getConfig()), this);
 
         getCommand("hubbly").setExecutor(new HubblyCommand(logger, getConfig(), getInstance()));
+
+        int pluginId = 22219;
+        Metrics metrics = new Metrics(this, pluginId);
     }
 
     @Override

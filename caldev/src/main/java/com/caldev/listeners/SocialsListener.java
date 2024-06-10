@@ -132,11 +132,11 @@ public class SocialsListener implements Listener {
             String textureValue = config.getString("socials.items." + itemKey + ".value");
             String displayName = config.getString("socials.items." + itemKey + ".name");
             if (textureValue == null || displayName == null) {
-                logger.warning("Texture value or display name not set for PLAYER_HEAD item " + itemKey + " in configuration.");
+                //logger.warning("Texture value or display name not set for PLAYER_HEAD item " + itemKey + " in configuration.");
                 return null;
             }
             displayName = ParsePlaceholders.parsePlaceholders(player, displayName);
-            logger.info("Creating custom head with texture value: " + textureValue + " and display name: " + displayName);
+            //logger.info("Creating custom head with texture value: " + textureValue + " and display name: " + displayName);
             item = CreateCustomHead.createCustomHead(textureValue, displayName);
         } else {
             item = new ItemStack(material);

@@ -15,21 +15,19 @@ commands:
 permissions:
   hubbly.hubbly:
     default: true
-  hubbly.command.compass:
-    default: op
-  hubbly.command.playervisibility:
-    default: op
-  hubbly.command.launchpad:
-    default: op
-  hubbly.command.shop:
-    default: op
   hubbly.compass.use:
-    default: op
+    default: true
   hubbly.launchpad.use:
-    default: op
+    default: true
   hubbly.playervisibility.use:
-    default: op
+    default: true
   hubbly.socials.use:
+    default: true
+  hubbly.shop.use:
+    default: true
+  hubbly.command.use:
+    default: op
+  hubbly.items.bypass:
     default: op
 
 

@@ -25,7 +25,7 @@ public class ShopListener implements Listener {
     public void onPlayerInteract(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         ItemStack itemInHand = player.getInventory().getItemInMainHand();
-        if (itemInHand.getType() == Material.valueOf(config.getString("shop.item.type"))) {
+        if (itemInHand.getType() == Material.valueOf(config.getString("shop.item.type")) && (player.hasPermission("hubbly.shop.use") || player.isOp())) {
             player.performCommand(Objects.requireNonNull(config.getString("shop.command")));
         }
     }
