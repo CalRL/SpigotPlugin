@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="metricstest:jar">
+    <output-path>$USER_HOME$/Desktop/server/plugins</output-path>
+    <root id="archive" name="metricstest.jar">
+      <element id="module-output" name="metricstest" />
+    </root>
+  </artifact>
+</component>

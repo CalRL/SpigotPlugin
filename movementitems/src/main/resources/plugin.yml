@@ -1,0 +1,21 @@
+name: MovementItems
+version: '${project.version}'
+main: com.movementitems.MovementItems
+api-version: '1.20'
+load: STARTUP
+authors: [cal]
+website: cal.ceo
+commands:
+  mvitems:
+    description: main command
+    usage: /mvitems
+    permission: mvitems.mvitems
+
+permissions:
+  mvitems.command.give:
+    default: op
+  mvitems.mvitems:
+    default: op
+  mvitems.enderbow.use:
+    default: true
+

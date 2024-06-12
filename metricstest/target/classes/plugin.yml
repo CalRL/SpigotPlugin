@@ -1,0 +1,5 @@
+name: metricstest
+version: '0.1-SNAPSHOT'
+main: com.caldev.Metricstest
+api-version: '1.20'
+load: STARTUP
